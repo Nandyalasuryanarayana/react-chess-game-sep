@@ -3,6 +3,9 @@ on:
     push: 
         branches: 
             master
+permissions: 
+    contents: read
+    checks: write
 jobs:
     job1:
         runs-on: ubuntu-latest
@@ -19,5 +22,11 @@ jobs:
               uses: actions/upload-artifact@v4
               with: 
                 name: react-build
-                path: build/static/js/main.b8c2213d.js               
+                path: build/static/js/main.b8c2213d.js 
+    job2:
+        runs-on: ubuntu-latest
+        steps:
+          - name: env variables 
+            run: environment= ${{ github.run_id }}
+
 
