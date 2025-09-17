@@ -16,5 +16,5 @@ jobs:
             - name: code lintining 
               run:  npm run lint
             - name: package code 
-              run: npm package
+              run: npm publish
 
