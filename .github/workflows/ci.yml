@@ -19,5 +19,5 @@ jobs:
               uses: actions/upload-artifact@v4
               with: 
                 name: react-build
-                file: build/static/js/main.b8c2213d.js               
+                path: build/static/js/main.b8c2213d.js               
 
