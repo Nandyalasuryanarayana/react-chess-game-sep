@@ -27,6 +27,9 @@ jobs:
         runs-on: ubuntu-latest
         steps:
           - name: env variables 
-            run: environment= ${{ github.run_id }}
-
+            run: |
+             echo " githubbranch=${{ github.ref_name}} "
+             echo " githubrepository=${{ github.repository}}"
+             echo " githubaction"=${{ github.action}}
+             
 
