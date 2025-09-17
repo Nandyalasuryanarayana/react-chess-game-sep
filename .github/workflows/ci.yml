@@ -1,0 +1,16 @@
+name: chess-game
+on: 
+    push: 
+        branches: 
+            master
+jobs:
+    job1:
+        runs-on: ubuntu-latest
+        steps:
+            - name: copy code
+              uses: actions/checkout@v5
+            - name: npm dependencies 
+              run : npm install
+            - name: build code 
+              run : npm run build
+              
