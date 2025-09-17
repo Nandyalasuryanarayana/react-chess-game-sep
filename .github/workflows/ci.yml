@@ -11,10 +11,13 @@ jobs:
               uses: actions/checkout@v5
             - name: npm dependencies 
               run : npm install
-            - name: build code 
-              run : npm run build
             - name: code lintining 
               run:  npm run lint
-            - name: package code 
-              run: npm publish
+            - name: build code 
+              run : npm run build
+            - name: upload artifact
+              uses: actions/upload-artifact@v4
+              with: 
+                name: react-build
+                file: build/static/js/main.b8c2213d.js               
 
